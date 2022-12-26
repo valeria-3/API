@@ -18,7 +18,7 @@ const { testData } = require("../config/data.json");
     });
     it('GET all posts and verify user 1 has 10 posts', async () => {
       const response = await sendRequest("posts");
-      expect(response.status).to.equal(200);
+      expect(response.status).to.equal(201);
       
       const filteredResponse = response.data.filter(post => post.userId == 1);
 
